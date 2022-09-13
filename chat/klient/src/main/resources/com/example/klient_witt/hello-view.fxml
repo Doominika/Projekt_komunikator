@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="BOTTOM_CENTER" prefHeight="354.0" prefWidth="461.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <VBox fx:id="historia" prefHeight="218.0" prefWidth="421.0" />
+   <Button fx:id="wyslij" mnemonicParsing="false" text="Button" />
+   <TextField fx:id="pisz" prefHeight="113.0" prefWidth="421.0" />
+   <ListView fx:id="lista" prefHeight="200.0" prefWidth="232.0" />
+</VBox>
