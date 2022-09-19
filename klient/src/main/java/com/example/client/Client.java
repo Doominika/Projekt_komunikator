@@ -18,7 +18,6 @@ public class Client
     private String username;
     private String user2;
 
-    // public Client(Socket socket, String username, String user2)
     public Client(Socket socket, String username)
     {
         try
@@ -27,7 +26,6 @@ public class Client
             this.bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             this.bufferedWriter = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
             this.username = username;
-            //this.user2 = user2;
 
         }
         catch(Exception e)
@@ -67,7 +65,6 @@ public class Client
                     try
                     {
                         msgFromGroupChat = bufferedReader.readLine();
-                        //JSONObject obj = new JSONObject(msgFromGroupChat);
                         ViewController.addLabel(msgFromGroupChat, vBox);
 
                         try

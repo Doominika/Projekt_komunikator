@@ -115,7 +115,7 @@ public class ViewController implements Initializable
                         try
                         {
                             //socket = new Socket("localhost", 8080); ////
-                            socket = new Socket("192.168.8.117", 8080); ////
+                            socket = new Socket("192.168.0.5", 8080); ////
 
                             client = new Client(socket, MainClient.getName());
                             client.setUser2(actReceiver);
@@ -173,7 +173,7 @@ public class ViewController implements Initializable
                             {
                                 JDBCFunctions jdbc = new JDBCFunctions();
                                 Integer idofconv = conversation.getId();
-                                jdbc.createTable(idofconv.toString());  //???
+                                jdbc.createTable(idofconv.toString());
                             }
                             catch (Exception e)
                             {
@@ -181,7 +181,6 @@ public class ViewController implements Initializable
                                 e.printStackTrace();
                             }
 
-                            //updateListofUsers();  //?????
                         }
                         else    //konwersacja istnieje w bazie
                         {
@@ -192,13 +191,11 @@ public class ViewController implements Initializable
                                 JDBCFunctions jdbc = new JDBCFunctions();
                                 List<DataMessage> list = jdbc.getAllMessages(idOfConversation.toString());
 
-                                //list.forEach(System.out::println);
 
                                 for (DataMessage dm : list)
                                 {
-                                    //System.out.println(dm.getSender());
 
-                                    System.out.println(actReceiver);
+                                    //System.out.println(actReceiver);
 
                                     if (dm.getSender().equals(MainClient.getName()))
                                     {
@@ -209,7 +206,7 @@ public class ViewController implements Initializable
 
                                         HBox hBox = new HBox();
                                         hBox.setAlignment(Pos.CENTER_LEFT);
-                                        hBox.setPadding(new Insets(5, 25, 5, 5));   //???
+                                        hBox.setPadding(new Insets(5, 25, 5, 5));
 
                                         Text text = new Text(dm.getMessage());
                                         TextFlow textFlow = new TextFlow(text);
@@ -240,7 +237,7 @@ public class ViewController implements Initializable
 
                     }
 
-                    client.listenForMessage((VBox) sp_window.getContent());     //???????????????????
+                    client.listenForMessage((VBox) sp_window.getContent());
 
 
 
@@ -288,7 +285,6 @@ public class ViewController implements Initializable
                 if (exists == false)
                 {
                     ur.addUser(new User(ur.findLastId(), tf_search.getText(), ""));
-                    //tf_search.setText("Taki człowiek nie istnieje");
                 }
             }
         });
@@ -302,7 +298,7 @@ public class ViewController implements Initializable
                 String msgToSend = tf_message.getText();
                 if (!msgToSend.isEmpty())
                 {
-                    addLabelOfMyMessage(msgToSend, (VBox) sp_window.getContent());      //?????????????????
+                    addLabelOfMyMessage(msgToSend, (VBox) sp_window.getContent());
 
                     JSONObject odp = new JSONObject();
                     odp.put("typ", "wiadomosc");
@@ -377,7 +373,7 @@ public class ViewController implements Initializable
     {
         HBox hBox = new HBox();
         hBox.setAlignment(Pos.CENTER_LEFT);
-        hBox.setPadding(new Insets(5, 25, 5, 5));   //???
+        hBox.setPadding(new Insets(5, 25, 5, 5));
 
         Text text = new Text(msgFromServer);
         TextFlow textFlow = new TextFlow(text);
@@ -424,7 +420,6 @@ public class ViewController implements Initializable
 
 
         hBox.getChildren().add(textFlow);
-        //VBox vb = (VBox) sp_window.getContent();
         vbox.getChildren().add(hBox);
 
     }
@@ -436,23 +431,19 @@ public class ViewController implements Initializable
         String name = MainClient.getName();
         Integer id = ur.findByName(name).getId();
 
-        //System.out.println(client.getUsername());
         for (Conversation i : cr.findFriends(id))
         {
             if (i.getUser1().getLogin().equals(name))
             {
                 listOfUsers.add(i.getUser2().getLogin());
-                //System.out.println(i.getUser2().getLogin());
             } else
             {
                 listOfUsers.add(i.getUser1().getLogin());
-                //System.out.println(i.getUser1().getLogin());
             }
         }
         lv_users.setItems(listOfUsers);
     }
 
-    //public void createVBox(String user)
     public void createVBox(DataToMap dtm)
     {
         VBox window = new VBox();
@@ -482,7 +473,6 @@ public class ViewController implements Initializable
 
 
         dtm.setvBox(window);
-        //windows.put(client, window);
         sp_window.setContent(window);
     }
 

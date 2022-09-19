@@ -48,7 +48,6 @@ public class JDBCFunctions
         while(result.next())
         {
             lista.add(new DataMessage(result.getString("sender"), result.getString("message")));
-            //System.out.println(result.getString("sender") + result.getString("message"));
         }
 
         return lista;

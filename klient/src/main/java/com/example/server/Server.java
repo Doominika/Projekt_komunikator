@@ -35,7 +35,6 @@ public class Server
             while(!serverSocket.isClosed())
             {
                 Socket socket = serverSocket.accept();
-                //System.out.println("Nowy gość dołączył do czatu grupowego");
 
                 ClientHandler client = new ClientHandler(socket);
                 System.out.println("klient hendler ");

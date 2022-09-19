@@ -79,15 +79,13 @@ public class LoginController implements Initializable
 
                     MainClient.setName(tf_login.getText());
 
-                    System.out.println("wleźli 2");
 
                     for (User user : ur.findAll())
                     {
                         if (user.getLogin().equals(tf_login.getText()))// login sie zgadza
                         {
-                            System.out.println("wleźli");
                             exists = true;
-                            System.out.println(user.getLogin());
+                            //System.out.println(user.getLogin());
 
                             if (pf_haslo.getText().equals(user.getHaslo()))
                             {
