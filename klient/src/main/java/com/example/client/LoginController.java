@@ -2,6 +2,7 @@ package com.example.client;
 
 import com.example.database.UserRep;
 import com.example.entities.User;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -18,6 +19,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import javafx.stage.WindowEvent;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -100,6 +102,13 @@ public class LoginController implements Initializable
                                 stage.setScene(scene);
 
                                 stage.show();
+                                stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                                @Override
+                                public void handle(WindowEvent windowEvent) {
+                                    Platform.exit();
+                                    System.exit(0);
+                                }
+                            });
                             }
                             else
                             {

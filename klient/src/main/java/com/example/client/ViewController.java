@@ -7,13 +7,12 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import org.json.JSONObject;
 import com.example.database.ConversationRep;
 import com.example.database.UserRep;
 import com.example.entities.Conversation;
 import com.example.entities.User;
-import com.example.other.Message;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -366,6 +365,14 @@ public class ViewController implements Initializable
         {
             dtm.getClient().closeEverything();
         }
+        MainClient.close();
+        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent windowEvent) {
+                Platform.exit();
+                System.exit(0);
+            }
+        });
     }
 
 

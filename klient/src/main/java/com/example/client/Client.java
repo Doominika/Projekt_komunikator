@@ -105,6 +105,7 @@ public class Client
             {
                 socket.close();
             }
+            System.exit(0);
         } catch (Exception e)
         {
             System.out.println("Mamy problem!");
@@ -127,6 +128,7 @@ public class Client
             {
                 this.socket.close();
             }
+            System.exit(0);
         } catch (Exception e)
         {
             System.out.println("Mamy problem!");
