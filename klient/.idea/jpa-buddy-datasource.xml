@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpbDataSourceConfig">
+    <data-sources>
+      <data-source id="e4dc0e7e-5ba1-4ca7-878a-eb91289c4e90" name="klient" url="jdbc:postgresql://localhost/chat" driverClass="org.postgresql.Driver" />
+    </data-sources>
+  </component>
+</project>

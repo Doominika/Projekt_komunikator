@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="bp_back" onMouseDragged="#draged" onMousePressed="#pressed" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.client.LoginController">
+   <center>
+      <HBox prefHeight="550.0" prefWidth="900.0">
+         <children>
+            <VBox fx:id="vb_backL" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="450.0">
+               <children>
+                  <Label fx:id="l_login" alignment="CENTER" prefHeight="76.0" prefWidth="283.0" text="Logowanie">
+                     <VBox.margin>
+                        <Insets bottom="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tf_login" maxHeight="40.0" maxWidth="200.0" prefHeight="40.0" prefWidth="200.0" promptText="Login">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="pf_haslo" maxHeight="40.0" maxWidth="200.0" prefHeight="40.0" prefWidth="200.0" promptText="Hasło">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </PasswordField>
+                  <Button fx:id="b_login" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Zaloguj">
+                     <VBox.margin>
+                        <Insets bottom="40.0" top="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="l_infoL" maxWidth="200.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+            <VBox fx:id="vb_backR" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="450.0">
+               <children>
+                  <Label fx:id="l_register" alignment="CENTER" prefHeight="76.0" prefWidth="283.0" text="Rejestracja">
+                     <VBox.margin>
+                        <Insets bottom="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tf_loginR" maxHeight="40.0" maxWidth="200.0" prefHeight="40.0" prefWidth="200.0" promptText="Login">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="pf_haslo1R" maxHeight="40.0" maxWidth="200.0" prefHeight="40.0" prefWidth="200.0" promptText="Hasło">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </PasswordField>
+                  <PasswordField fx:id="pf_haslo2R" layoutX="60.0" layoutY="246.0" maxHeight="40.0" maxWidth="200.0" prefHeight="40.0" prefWidth="200.0" promptText="Powtórz hasło">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </PasswordField>
+                  <Button fx:id="b_registerR" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Zarejestruj się">
+                     <VBox.margin>
+                        <Insets bottom="40.0" top="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="l_infoR" maxWidth="200.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <top>
+      <HBox fx:id="titlebar" alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="l_minimalize" alignment="CENTER" layoutX="572.0" layoutY="21.0" onMouseClicked="#minimalize" prefHeight="35.0" prefWidth="35.0" text="―">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Droid Sans Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="l_close" alignment="CENTER" onMouseClicked="#close" prefHeight="35.0" prefWidth="35.0" text="×">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Droid Sans" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

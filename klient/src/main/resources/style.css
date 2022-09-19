@@ -1,0 +1,136 @@
+// LOGIN PANEL
+
+#vb_back
+{
+    //-fx-background-color: rgba(113, 77, 57, 0.68);
+    //-fx-background-color: rgba(45, 105, 115, 1);
+    //-fx-background-color: rgba(57, 81, 67, 1);
+    //-fx-background-color: rgba(57, 81, 67, 1);
+    //-fx-background-color: rgba(21, 38, 34, 1);
+    -fx-background-color: #395143;
+
+}
+
+
+#bp_back
+{
+    -fx-background-color: transparent;
+    -fx-background-image: url("forest.png");
+    -fx-background-size: cover;
+    -fx-background-opacity: 0;
+}
+
+
+#pf_haslo,
+#tf_login,
+#tf_loginR,
+#pf_haslo1R,
+#pf_haslo2R
+{
+    //-fx-background-color: rgba(0, 0, 0, 0.05);
+    -fx-background-color: rgba(0, 0, 0, 0.05);
+    -fx-background-radius: 4px;
+    //-fx-text-fill: #152622;
+    -fx-text-fill: rgba(174, 193, 171, 0.9);
+    -fx-text-size: 30px;
+}
+
+
+#l_login,
+#l_register
+{
+    //-fx-text-fill: rgba(174, 193, 171, 0.7);
+    -fx-text-fill: #C7C19D;
+    -fx-font-weigh: bold;
+}
+
+
+#b_registerR,
+#b_login
+{
+    //-fx-background-color: rgba(103, 179, 159, 0.2);
+    //-fx-background-color: #133D46;
+    -fx-background-color: rgba(0, 0, 0, 0.05);
+
+    //-fx-text-fill: rgba(224, 224, 224, 0.5);
+    -fx-text-fill: #C7C19D;
+    -fx-border-color: rgba(0, 0, 0, 0.2);
+    -fx-border-radius: 4px;
+}
+
+
+#b_login:hover,
+#b_registerR:hover
+{
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+#l_infoL,
+#l_infoR
+{
+    -fx-text-fill: rgba(0, 0, 0, 0.7);
+}
+
+
+#titlebar
+{
+    -fx-background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+
+// CHAT PANEL
+
+
+#vb_history,
+#lv_users
+{
+    -fx-background-color: #4A6254;
+    -fx-background-radius: 2px;
+    -fx-text-fill: #152622;
+    -fx-border-radius: 4px;
+}
+
+
+#lv_users .list-cell,
+#sp_window
+{
+   // -fx-background-color: #4D6557;
+   -fx-background-color: rgba(57, 81, 67, 0.5);
+   -fx-background-radius: 4px;
+
+}
+
+
+#lv_users .list-cell:selected
+{
+   -fx-background-color: rgba(101, 143, 71, 0.4);
+   -fx-text-fill: #C7C19D;
+ }
+
+
+#tf_search,
+#tf_message
+{
+    -fx-background-color: #4A6254;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+
+}
+
+
+#b_send,
+#b_search
+{
+    -fx-background-color: #4A6254;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+}
+
+
+#b_send:hover,
+#b_search:hover
+{
+    -fx-background-color: #5B7365;
+}
